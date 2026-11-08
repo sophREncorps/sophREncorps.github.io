@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sophREncorps · Sophrologie</title>
+<meta name="description" content="sophREncorps · Sophrologie à domicile, en cabinet ou en visio. Un accompagnement personnalisé, dans un cadre d'écoute et de confidentialité.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#F7EFE5; --creme2:#FBF7F2; --papier:#FFFDF9;
+  --bleu:#2E5784; --bleu-doux:#AFC8DE; --corail:#C4552D; --corail-vif:#E5683C;
+  --peche:#F2A685; --sauge:#7F9876; --texte:#3E4E59; --ligne:#E8DCCD;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--creme);color:var(--texte);font-family:"Nunito",system-ui,sans-serif;font-size:17px;line-height:1.7}
+a{color:inherit}
+.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+
+/* Navigation */
+nav{position:sticky;top:0;z-index:20;background:rgba(247,239,229,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--ligne)}
+.nav-inner{height:66px;display:flex;align-items:center;justify-content:space-between}
+.marque{font-family:"Quicksand",system-ui,sans-serif;font-weight:700;font-size:1.3rem;color:var(--bleu);text-decoration:none;letter-spacing:.02em}
+.marque span{color:var(--corail-vif)}
+nav ul{display:flex;gap:26px;list-style:none;font-family:"Quicksand",system-ui,sans-serif;font-weight:600;font-size:.93rem}
+nav a{text-decoration:none} nav li a{color:var(--bleu)} nav li a:hover{color:var(--corail-vif)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.burger svg{width:26px;height:26px;display:block}
+.nav-mobile{display:none}
+@media(max-width:720px){
+  nav ul{display:none}
+  .nav-inner{height:58px}
+  .burger{display:block}
+  .nav-mobile.open{display:block;background:var(--papier);border-bottom:1px solid var(--ligne)}
+  .nav-mobile a{display:block;padding:14px 22px;text-decoration:none;color:var(--bleu);font-family:"Quicksand",system-ui,sans-serif;font-weight:600;border-top:1px solid var(--ligne)}
+}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:78px 0 86px}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;left:-250px;bottom:-300px;background:var(--bleu-doux);opacity:.42}
+.hero:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-180px;top:-180px;background:var(--peche);opacity:.20}
+.hero-inner{position:relative;z-index:1;text-align:center}
+.logo{width:128px;height:128px;margin:0 auto 14px;display:block}
+.hero h1{font-family:"Quicksand",system-ui,sans-serif;font-weight:600;font-size:clamp(2.8rem,8vw,4.5rem);line-height:1.05;color:var(--bleu);letter-spacing:.025em}
+.hero h1 span{color:var(--corail-vif)}
+.filet{display:flex;align-items:center;justify-content:center;gap:10px;max-width:430px;margin:16px auto 12px}
+.filet:before,.filet:after{content:"";height:1px;flex:1;background:var(--bleu);opacity:.42}
+.filet i{width:8px;height:8px;background:var(--corail-vif);border-radius:50%}
+.titre{font-family:"Quicksand",system-ui,sans-serif;color:var(--corail);letter-spacing:.23em;font-size:.82rem;font-weight:700;margin-top:3px}
+.devise{font-family:"Great Vibes","Nunito",cursive;color:var(--bleu);font-size:clamp(2rem,6vw,2.75rem);margin:23px 0 12px}
+.intro{max-width:650px;margin:0 auto 28px;font-size:1.08rem}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:12px 23px;border-radius:40px;text-decoration:none;font-family:"Quicksand",system-ui,sans-serif;font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(46,87,132,.13)}
+.btn-plein{background:var(--corail-vif);color:#fff}
+.btn-contour{border:1.5px solid var(--bleu);color:var(--bleu);background:transparent}
+
+.pill-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:32px}
+.pill{background:rgba(255,253,249,.76);border:1px solid rgba(127,152,118,.28);border-radius:30px;padding:8px 15px;color:#52644D;font-size:.92rem}
+
+section{padding:82px 0}
+.alt{background:var(--creme2)}
+h2{font-family:"Quicksand",system-ui,sans-serif;font-weight:700;color:var(--bleu);font-size:clamp(1.8rem,4.5vw,2.35rem);line-height:1.2;text-align:center;margin-bottom:8px}
+.sous{text-align:center;color:var(--corail);font-family:"Quicksand",system-ui,sans-serif;letter-spacing:.18em;font-size:.78rem;font-weight:700;text-transform:uppercase;margin-bottom:38px}
+
+/* About / portrait */
+.about{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(300px,1.2fr);gap:60px;align-items:center;max-width:920px;margin:auto}
+.about-visual{min-height:330px;border-radius:34px;background:linear-gradient(145deg,#E8F0F5,#F9EEE5);position:relative;overflow:hidden;display:grid;place-items:center}
+.about-visual:before{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(46,87,132,.22);border-radius:50%;transform:rotate(-22deg)}
+.about-visual:after{content:"";position:absolute;width:150px;height:150px;background:var(--peche);opacity:.20;border-radius:58% 42% 55% 45%;right:-35px;bottom:-25px}
+.about-quote{position:relative;z-index:1;text-align:center;padding:30px;font-family:"Great Vibes","Nunito",cursive;color:var(--bleu);font-size:2.4rem;line-height:1.2}
+.about-text h3{font-family:"Quicksand",system-ui,sans-serif;color:var(--bleu);font-size:1.45rem;margin-bottom:14px}
+.about-text p+p{margin-top:15px}
+.signature{font-family:"Great Vibes","Nunito",cursive;color:var(--bleu);font-size:1.9rem;margin-top:20px}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}.about-visual{min-height:230px}}
+
+/* accompagnements */
+.cartes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:920px;margin:auto}
+.carte{background:var(--papier);border:1px solid rgba(232,220,205,.9);border-radius:20px;padding:28px 26px;box-shadow:0 8px 26px rgba(46,87,132,.045)}
+.leaf{width:38px;height:38px;margin-bottom:13px}
+.carte h3{font-family:"Quicksand",system-ui,sans-serif;color:var(--bleu);font-size:1.2rem;margin-bottom:8px}
+.carte p{font-size:.96rem}
+@media(max-width:650px){.cartes{grid-template-columns:1fr}}
+
+/* séance */
+.seance-intro{max-width:690px;text-align:center;margin:0 auto 34px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:auto}
+.step{text-align:center;padding:10px 18px}
+.number{width:44px;height:44px;border-radius:50%;margin:0 auto 13px;display:grid;place-items:center;background:var(--bleu);color:white;font-family:"Quicksand",system-ui,sans-serif;font-weight:700}
+.step h3{font-family:"Quicksand",system-ui,sans-serif;color:var(--bleu);font-size:1.05rem;margin-bottom:6px}
+.step p{font-size:.93rem}
+@media(max-width:650px){.steps{grid-template-columns:1fr}}
+
+/* infos pratiques */
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:920px;margin:0 auto 42px}
+.info{background:var(--papier);border:1px solid var(--ligne);border-radius:20px;padding:24px;text-align:center}
+.info strong{display:block;font-family:"Quicksand",system-ui,sans-serif;color:var(--bleu);font-size:1.05rem;margin-bottom:6px}
+.info p{font-size:.93rem}
+@media(max-width:650px){.infos{grid-template-columns:1fr}}
+
+/* témoignage */
+.temoignage{max-width:680px;margin:0 auto;background:var(--papier);border:1px solid var(--ligne);border-radius:24px;padding:34px 38px;text-align:center;font-style:italic;position:relative}
+.temoignage:before{content:"“";position:absolute;top:-6px;left:16px;font-family:"Quicksand",system-ui,sans-serif;font-size:4.5rem;color:var(--bleu-doux);line-height:1}
+.temoignage footer{background:none;padding:0;color:var(--corail);font-style:normal;font-family:"Quicksand",system-ui,sans-serif;font-weight:600;font-size:.85rem;margin-top:14px}
+
+/* modes */
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:auto}
+.mode{background:var(--papier);border-radius:20px;padding:28px;display:flex;gap:18px;align-items:flex-start;border:1px solid var(--ligne)}
+.pastille{flex:none;width:54px;height:54px;border-radius:50%;display:grid;place-items:center}
+.pastille svg{width:25px;height:25px}
+.mode h3{font-family:"Quicksand",system-ui,sans-serif;color:var(--bleu);margin-bottom:5px}
+@media(max-width:900px){.modes{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.modes{grid-template-columns:1fr}}
+
+/* contact */
+.contact-box{max-width:800px;margin:auto;background:var(--papier);border-radius:28px;padding:40px;text-align:center;border:1px solid var(--ligne);box-shadow:0 10px 30px rgba(46,87,132,.05)}
+.contact-box p{max-width:580px;margin:0 auto 25px}
+.contact{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.contact a{display:flex;align-items:center;gap:10px;border:1px solid var(--ligne);border-radius:40px;padding:10px 18px;text-decoration:none;color:var(--bleu);font-family:"Quicksand",system-ui,sans-serif;font-weight:700;background:#fff}
+.contact a:hover{border-color:var(--bleu-doux)}
+.contact a svg{width:18px;height:18px;flex:none}
+.reassurance{margin-top:22px;font-size:.9rem;color:var(--sauge)}
+
+footer{background:var(--bleu);color:#E8F0F6;padding:38px 0;text-align:center;font-size:.88rem}
+footer .marque{color:white} footer .marque span{color:var(--peche)}
+.legal{max-width:720px;margin:18px auto 0;opacity:.85;font-size:.8rem}
+.legal + .legal{margin-top:8px}
+footer a{text-decoration:underline}
+
+@media(max-width:500px){body{font-size:16px}.wrap{width:min(100% - 28px,1080px)}section{padding:64px 0}.hero{padding:60px 0 70px}.contact-box{padding:28px 18px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="marque" href="#accueil">soph<span>RE</span>ncorps</a>
+    <ul>
+      <li><a href="#qui">Qui suis-je ?</a></li>
+      <li><a href="#accompagnements">Pour quoi ?</a></li>
+      <li><a href="#seances">Une séance</a></li>
+      <li><a href="#modalites">Modalités</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2E5784" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#qui">Qui suis-je ?</a>
+    <a href="#accompagnements">Pour quoi ?</a>
+    <a href="#seances">Une séance</a>
+    <a href="#modalites">Modalités</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="accueil">
+  <div class="wrap hero-inner">
+    <svg class="logo" viewBox="0 0 150 150" aria-hidden="true">
+      <path d="M95 22 A58 58 0 1 0 126 106 A48 48 0 1 1 95 22 Z" fill="#A7D2FF"/>
+      <path d="M35 88 Q60 66 85 92 T130 96" stroke="#4A90E2" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M48 118 Q70 102 82 70 Q92 46 112 30" stroke="#B8845A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="76" cy="88" rx="11" ry="6" transform="rotate(-50 76 88)" fill="#FF8C42"/>
+      <ellipse cx="94" cy="72" rx="11" ry="6" transform="rotate(20 94 72)" fill="#FF8C42"/>
+      <ellipse cx="82" cy="58" rx="10" ry="5.5" transform="rotate(-60 82 58)" fill="#FF8C42" opacity=".9"/>
+      <ellipse cx="104" cy="50" rx="10" ry="5.5" transform="rotate(15 104 50)" fill="#FF8C42"/>
+      <ellipse cx="114" cy="30" rx="8" ry="4.5" transform="rotate(-20 114 30)" fill="#8BC34A"/>
+      <circle cx="132" cy="48" r="3.5" fill="#FF8C42"/><circle cx="136" cy="60" r="3.5" fill="#FF8C42"/><circle cx="134" cy="74" r="3.5" fill="#4A90E2"/>
+    </svg>
+    <h1>soph<span>RE</span>ncorps</h1>
+    <div class="filet"><i></i></div>
+    <p class="titre">SOPHROLOGIE</p>
+    <p class="devise">Harmonie du corps et de l'esprit</p>
+    <p class="intro"> Je suis Isabelle, Sophrologue. Je vous accompagne pour vous aider à retrouver un peu de calme, mieux vivre vos émotions et avancer avec sérénité.</p>
+    <div class="boutons">
+      <a class="btn btn-plein" href="#contact">Prendre contact</a>
+      <a class="btn btn-contour" href="#qui">Faire ma connaissance</a>
+    </div>
+    <div class="pill-row"><span class="pill">À domicile</span><span class="pill">En cabinet</span><span class="pill">En visio</span><span class="pill">[Ville] et alentours</span></div>
+  </div>
+</header>
+
+<section id="qui">
+  <div class="wrap">
+    <h2>Qui suis-je ?</h2>
+    <p class="sous">Un visage derrière l'accompagnement</p>
+    <div class="about">
+      <div class="about-visual"><p class="about-quote">Prendre le temps<br>de souffler,<br>simplement.</p></div>
+      <div class="about-text">
+        <h3>Je m'appelle [Prénom Nom]</h3>
+        <p>Sophrologue certifiée  de l'IFS de Paris [titre / école, ex. RNCP], j'ai à cœur d'offrir un espace d'écoute où chacun se sente accueilli, sans jugement, avec ce qu'il amène ce jour-là.</p>
+        <p>[Deux ou trois phrases sur votre parcours : ce qui vous a menée à la sophrologie, vos valeurs, votre approach.] Mon approche est concrète et progressive : les exercices que nous explorons ensemble sont pensés pour être repris simplement, au quotidien.</p>
+        <p class="signature">[Prénom]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="accompagnements">
+  <div class="wrap">
+    <h2>La sophrologie peut vous accompagner</h2>
+    <p class="sous">Selon ce que vous traversez aujourd'hui</p>
+    <div class="cartes">
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Stress & émotions</h3><p>Mieux gérer les périodes de stress et apprendre à disposer de techniques de respiration et de détente au quotidien.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Confiance & estime de soi</h3><p>Travailler la perception de soi, préparer une situation particulière et renforcer ses ressources personnelles.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Sommeil & récupération</h3><p>Mettre en place des exercices de détente et favoriser un environnement propice au repos et à la récupération.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Changements de vie</h3><p>Être accompagné lors d'une période de transition, d'un changement ou d'une étape importante.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="seances">
+  <div class="wrap">
+    <h2>À quoi ressemble une séance ?</h2>
+    <p class="sous">Un temps d'échange et de pratique</p>
+    <p class="seance-intro">Il n'est pas nécessaire de savoir faire quoi que ce soit avant de commencer. Nous prenons d'abord le temps d'échanger, puis les exercices sont adaptés à votre situation et à votre rythme.</p>
+    <div class="steps">
+      <div class="step"><div class="number">1</div><h3>Échanger</h3><p>Faire le point sur votre demande, votre contexte et l'objectif de l'accompagnement.</p></div>
+      <div class="step"><div class="number">2</div><h3>Pratiquer</h3><p>Découvrir et expérimenter des exercices adaptés : respiration, détente et techniques de sophrologie.</p></div>
+      <div class="step"><div class="number">3</div><h3>Faire le point</h3><p>Échanger sur votre expérience et identifier les exercices que vous pourrez reprendre entre les séances.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="modalites">
+  <div class="wrap">
+    <h2>Où se déroule la séance ?</h2>
+    <p class="sous">Trois possibilités, selon vos besoins</p>
+    <div class="infos">
+      <div class="info"><strong>Durée</strong><p>Environ 1h à 1h15 par séance, dont un temps d'échange avant et après la pratique.</p></div>
+      <div class="info"><strong>Zone d'intervention</strong><p>[Ville] et ses alentours ([rayon] km) pour les séances à domicile. La visio est possible partout.</p></div>
+      <div class="info"><strong>Tarifs</strong><p>[Tarif] € la séance. [Forfaits / conditions éventuelles.] Le premier échange téléphonique est gratuit et sans engagement.</p></div>
+    </div>
+    <div class="modes">
+      <div class="mode"><div class="pastille" style="background:#D3DDCB"><svg viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v10h-6v-6H9v6H3Z" fill="#4F6448"/></svg></div><div><h3>À domicile</h3><p>Je viens chez vous pour une séance dans votre environnement habituel.</p></div></div>
+      <div class="mode"><div class="pastille" style="background:#F8D2C0"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5" fill="none" stroke="#C4552D" stroke-width="2"/><path d="M2 19h20" stroke="#C4552D" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>En visio</h3><p>Une séance à distance, depuis chez vous, dans un cadre adapté à la pratique.</p></div></div>
+      <div class="mode"><div class="pastille" style="background:#DCE7DF"><svg viewBox="0 0 24 24"><path d="M5 20V9l7-5 7 5v11" fill="none" stroke="#4F6448" stroke-width="2"/><path d="M9 20v-6h6v6" fill="none" stroke="#4F6448" stroke-width="2"/></svg></div><div><h3>En cabinet</h3><p>Un rendez-vous dans un espace dédié à la séance. Les modalités pratiques vous sont précisées lors de la prise de contact.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="temoignages">
+  <div class="wrap">
+    <h2>Ils m'ont fait confiance</h2>
+    <p class="sous">Paroles de personnes accompagnées</p>
+    <blockquote class="temoignage">
+      « [Court témoignage : ex. "Après quelques séances, j'ai retrouvé un sommeil plus serein et surtout des outils simples que j'utilise encore au quotidien."] »
+      <footer>— [Prénom ou initiales], [contexte : ex. accompagnement pour le sommeil]</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2>Envie d'en savoir plus ?</h2>
+    <p class="sous">Un premier contact, sans engagement</p>
+    <div class="contact-box">
+      <p>Vous vous demandez si la sophrologie peut répondre à votre besoin ? Vous pouvez simplement appeler ou écrire. Un premier échange permet de faire le point et de voir ensemble si cet accompagnement vous convient.</p>
+      <div class="contact">
+        <a href="tel:+33664948982"><svg viewBox="0 0 24 24" fill="none" stroke="#2E5784" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>06 64 94 89 82</a>
+        <a href="mailto:meynardsix@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="#2E5784" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>meynardsix@gmail.com</a>
+      </div>
+      <p class="reassurance">Je réponds généralement sous 48h. Le premier échange est gratuit et sans engagement.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="marque">soph<span>RE</span>ncorps</p>
+    <p style="margin-top:6px">Sophrologie · À domicile, en cabinet et en visio · [Ville]</p>
+    <p class="legal">La sophrologie s'inscrit dans une démarche d'accompagnement et de bien-être. Elle ne remplace pas un avis, un diagnostic ou un traitement médical.</p>
+    <p class="legal">[Prénom Nom] · [SIRET] · Site hébergé par [hébergeur]. © <span id="annee"></span> sophREncorps</p>
+  </div>
+</footer>
+
+<script>
+var burger=document.getElementById('burger'),nm=document.getElementById('navMobile'),an=document.getElementById('annee');
+burger.addEventListener('click',function(){var o=nm.classList.toggle('open');burger.setAttribute('aria-expanded',o?'true':'false');});
+nm.addEventListener('click',function(e){if(e.target.tagName==='A'){nm.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
+an.textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>v
