@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sophREncorps · Sophrologie</title>
-<meta name="description" content="sophREncorps · Sophrologie à domicile, en cabinet ou en visio. Un accompagnement personnalisé, dans un cadre d'écoute et de confidentialité.">
+<meta name="description" content="sophREncorps · Sophrologie à domicile et en visioconférence à Clermont-Ferrand et alentours. Accompagnement des adultes, adolescents et enfants.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,12 +94,18 @@ h2{font-family:"Quicksand",system-ui,sans-serif;font-weight:700;color:var(--bleu
 @media(max-width:650px){.steps{grid-template-columns:1fr}}
 
 /* infos pratiques */
-.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:920px;margin:0 auto 42px}
+.infos{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:920px;margin:0 auto 42px}
 .info{background:var(--papier);border:1px solid var(--ligne);border-radius:20px;padding:24px;text-align:center}
 .info strong{display:block;font-family:"Quicksand",system-ui,sans-serif;color:var(--bleu);font-size:1.05rem;margin-bottom:6px}
 .info p{font-size:.93rem}
 @media(max-width:650px){.infos{grid-template-columns:1fr}}
 
+.tarifs{max-width:760px;margin:0 auto;background:var(--papier);border:1px solid var(--ligne);border-radius:22px;padding:14px 28px}
+.tarif{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:15px 4px;border-bottom:1px solid var(--ligne)}
+.tarif:last-child{border-bottom:0}
+.tarif strong{color:var(--corail);font-family:"Quicksand",system-ui,sans-serif;white-space:nowrap}
+.tarif-note{max-width:760px;margin:18px auto 0;text-align:center;font-size:.92rem}
+@media(max-width:650px){.tarif{align-items:flex-start;flex-direction:column;gap:3px}.steps[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
 /* témoignage */
 .temoignage{max-width:680px;margin:0 auto;background:var(--papier);border:1px solid var(--ligne);border-radius:24px;padding:34px 38px;text-align:center;font-style:italic;position:relative}
 .temoignage:before{content:"“";position:absolute;top:-6px;left:16px;font-family:"Quicksand",system-ui,sans-serif;font-size:4.5rem;color:var(--bleu-doux);line-height:1}
@@ -140,8 +146,9 @@ footer a{text-decoration:underline}
     <ul>
       <li><a href="#qui">Qui suis-je ?</a></li>
       <li><a href="#accompagnements">Pour quoi ?</a></li>
+      <li><a href="#approche">Mon approche</a></li>
       <li><a href="#seances">Une séance</a></li>
-      <li><a href="#modalites">Modalités</a></li>
+      <li><a href="#modalites">Tarifs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -151,8 +158,9 @@ footer a{text-decoration:underline}
   <div class="nav-mobile" id="navMobile">
     <a href="#qui">Qui suis-je ?</a>
     <a href="#accompagnements">Pour quoi ?</a>
+    <a href="#approche">Mon approche</a>
     <a href="#seances">Une séance</a>
-    <a href="#modalites">Modalités</a>
+    <a href="#modalites">Tarifs</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -164,12 +172,12 @@ footer a{text-decoration:underline}
     <div class="filet"><i></i></div>
     <p class="titre">SOPHROLOGIE</p>
     <p class="devise">Harmonie du corps et de l'esprit</p>
-    <p class="intro">Je vous accompagne pour vous aider à retrouver un peu de calme, mieux vivre vos émotions et avancer avec sérénité.</p>
+    <p class="intro">Un accompagnement personnalisé pour mieux gérer le stress et les émotions, améliorer votre sommeil, renforcer votre confiance et traverser plus sereinement les étapes importantes de la vie.</p>
     <div class="boutons">
       <a class="btn btn-plein" href="#contact">Prendre contact</a>
       <a class="btn btn-contour" href="#qui">Faire ma connaissance</a>
     </div>
-    <div class="pill-row"><span class="pill">À domicile</span><span class="pill">En cabinet</span><span class="pill">En visio</span><span class="pill">Clermont-Ferrand et alentours</span></div>
+    <div class="pill-row"><span class="pill">À domicile</span><span class="pill">En visioconférence</span><span class="pill">Adultes, adolescents et enfants de 4 à 16 ans</span><span class="pill">Clermont-Ferrand et alentours</span></div>
   </div>
 </header>
 
@@ -181,8 +189,9 @@ footer a{text-decoration:underline}
       <div class="about-visual"><img src="isabelle-meynard.jpg" alt="Isabelle Meynard, sophrologue, dans un jardin"></div>
       <div class="about-text">
         <h3>Je m'appelle Isabelle Meynard</h3>
-        <p>Sophrologue certifiée de l'IFS de Paris 10 (fondée par Catherine Aliotta), j'ai à cœur d'offrir un espace d'écoute où chacun se sente accueilli, sans jugement, avec ce qu'il amène ce jour-là.</p>
-        <p>Mon approche est concrète et progressive : les exercices que nous explorons ensemble sont pensés pour être repris simplement, au quotidien.</p>
+        <p>Assistante sociale de formation, j'ai toujours placé l'écoute et l'accompagnement au cœur de mon parcours professionnel.</p>
+        <p>J'ai découvert la sophrologie il y a une trentaine d'années, pendant ma première grossesse. J'en ai apprécié les effets sur la détente et la concentration. Plus tard, dans une période marquée par le stress et les perturbations émotionnelles, cette pratique m'a aidée à retrouver un équilibre, à reprendre confiance en moi et à me projeter dans de nouveaux projets.</p>
+        <p>Cette expérience a donné une nouvelle direction à mon parcours : me former pour accompagner à mon tour. Je suis aujourd'hui sophrologue certifiée, titulaire d'une certification professionnelle délivrée par l'Institut de Formation à la Sophrologie (IFS).</p>
         <p class="signature">Isabelle</p>
       </div>
     </div>
@@ -192,12 +201,34 @@ footer a{text-decoration:underline}
 <section class="alt" id="accompagnements">
   <div class="wrap">
     <h2>La sophrologie peut vous accompagner</h2>
-    <p class="sous">Selon ce que vous traversez aujourd'hui</p>
+    <p class="sous">Un accompagnement adapté à chacun</p>
+    <p class="seance-intro">Les séances s'adressent aux adultes, aux adolescents et aux enfants de 4 à 16 ans. Les exercices et leur durée sont adaptés à l'âge, aux capacités et à l'objectif de chacun.</p>
     <div class="cartes">
-      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Stress & émotions</h3><p>Mieux vivre les périodes de stress et apprendre à disposer de techniques de respiration et de détente au quotidien.</p></article>
-      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Confiance & estime de soi</h3><p>Travailler la perception de soi, préparer une situation particulière et renforcer ses ressources personnelles.</p></article>
-      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Sommeil & récupération</h3><p>Mettre en place des exercices de détente et favoriser un environnement propice au repos et à la récupération.</p></article>
-      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Changements de vie</h3><p>Être accompagné lors d'une période de transition, d'un changement ou d'une étape importante.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Stress et émotions</h3><p>Mieux gérer le stress, la pression et les émotions envahissantes, et apprendre à retrouver des moments de calme et de sérénité.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Sommeil et récupération</h3><p>Favoriser la détente et retrouver progressivement un sommeil plus serein.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Confiance et adaptation</h3><p>Renforcer la confiance en soi, mobiliser ses ressources et mieux vivre les périodes de changement personnel ou professionnel.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Se préparer à une échéance</h3><p>Se préparer à un examen, un entretien, une prise de parole, une hospitalisation, un déplacement ou une compétition.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Enfants et adolescents</h3><p>Accompagner les plus jeunes pour qu'ils se sentent mieux dans leur quotidien, avec des exercices adaptés à leur âge et à leurs besoins.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Grossesse et maternité</h3><p>Un accompagnement en sophrologie prénatale pour se préparer sereinement à la maternité.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Bien-être des seniors</h3><p>Un accompagnement adapté aux personnes âgées, en tenant compte de leur rythme, de leurs besoins et de leurs ressources.</p></article>
+      <article class="carte"><svg class="leaf" viewBox="0 0 38 38"><path d="M8 33C4 20 13 7 31 4c1 16-8 27-23 29Z" fill="#F2A685"/><path d="M8 33 27 10" stroke="#E5683C" stroke-width="1.5" fill="none"/></svg><h3>Douleurs physiques</h3><p>Apprendre à mieux vivre avec certaines douleurs, uniquement en complément d'une prise en charge médicale.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="approche">
+  <div class="wrap">
+    <h2>Mon approche</h2>
+    <p class="sous">Écoute, bienveillance et adaptation</p>
+    <div class="seance-intro">
+      <p>Mon accompagnement repose sur l'écoute, la bienveillance et l'adaptation. Ensemble, nous définissons un objectif clair, à partir duquel je construis un parcours personnalisé qui respecte votre situation, votre rythme et vos besoins.</p>
+      <p style="margin-top:16px">Au fil des séances, je vous guide dans des exercices de respiration, de détente musculaire et de visualisation. Entre les rendez-vous, vous pouvez reprendre certaines pratiques pour intégrer peu à peu la sophrologie à votre quotidien.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte"><h3>Vous accueillir</h3><p>Avec écoute, respect et bienveillance, dans un cadre où chacun peut avancer à son rythme.</p></article>
+      <article class="carte"><h3>Définir un objectif</h3><p>Construire avec vous un objectif réaliste et adapté à votre situation.</p></article>
+      <article class="carte"><h3>Personnaliser l'accompagnement</h3><p>Adapter les exercices à vos besoins, vos capacités et vos limites.</p></article>
+      <article class="carte"><h3>Favoriser votre autonomie</h3><p>Vous transmettre des pratiques simples à reprendre dans votre quotidien.</p></article>
     </div>
   </div>
 </section>
@@ -206,42 +237,38 @@ footer a{text-decoration:underline}
   <div class="wrap">
     <h2>À quoi ressemble une séance ?</h2>
     <p class="sous">Un temps d'échange et de pratique</p>
-    <p class="seance-intro">Il n'est pas nécessaire de savoir faire quoi que ce soit avant de commencer. Nous prenons d'abord le temps d'échanger, puis les exercices sont adaptés à votre situation et à votre rythme.</p>
-    <div class="steps">
-      <div class="step"><div class="number">1</div><h3>Échanger</h3><p>Faire le point sur votre demande, votre contexte et l'objectif de l'accompagnement.</p></div>
-      <div class="step"><div class="number">2</div><h3>Pratiquer</h3><p>Découvrir et expérimenter des exercices adaptés : respiration, détente et techniques de sophrologie.</p></div>
-      <div class="step"><div class="number">3</div><h3>Faire le point</h3><p>Échanger sur votre expérience et identifier les exercices que vous pourrez reprendre entre les séances.</p></div>
+    <p class="seance-intro">Une séance alterne échange, exercices guidés et temps d'expression. Elle s'adapte à votre demande et à votre rythme.</p>
+    <div class="steps" style="grid-template-columns:repeat(2,1fr)">
+      <div class="step"><div class="number">1</div><h3>Un temps d'échange</h3><p>Comprendre votre demande et préciser votre objectif. Au fil des séances, nous faisons le point sur votre évolution et ajustons l'accompagnement à vos besoins.</p></div>
+      <div class="step"><div class="number">2</div><h3>Des exercices guidés</h3><p>Pratiquer la respiration, la détente musculaire et des mouvements doux, adaptés à votre situation.</p></div>
+      <div class="step"><div class="number">3</div><h3>Une visualisation</h3><p>Mobiliser vos ressources et ancrer des sensations positives.</p></div>
+      <div class="step"><div class="number">4</div><h3>Un temps d'expression</h3><p>Accueillir vos ressentis et choisir les exercices à pratiquer en autonomie.</p></div>
     </div>
   </div>
 </section>
 
 <section class="alt" id="modalites">
   <div class="wrap">
-    <h2>Où se déroule la séance ?</h2>
-    <p class="sous">Trois possibilités, selon vos besoins</p>
+    <h2>Tarifs et modalités</h2>
+    <p class="sous">Des séances individuelles ou en groupe</p>
     <div class="infos">
-      <div class="info"><strong>Durée</strong><p>Environ 1h à 1h15 par séance, dont un temps d'échange avant et après la pratique.</p></div>
-      <div class="info"><strong>Zone d'intervention</strong><p>Clermont-Ferrand et ses alentours pour les séances à domicile. La visio est possible partout.</p></div>
-      <div class="info"><strong>Tarifs</strong><p>[Tarif] € la séance. [Forfaits / conditions éventuelles.] Le premier échange téléphonique est gratuit et sans engagement.</p></div>
+      <div class="info"><strong>Durée</strong><p>Une séance dure généralement entre 1 heure et 1 heure 15.</p></div>
+      <div class="info"><strong>À domicile</strong><p>Les séances à domicile sont proposées à Clermont-Ferrand et dans les alentours.</p></div>
+      <div class="info"><strong>En cabinet</strong><p>Les séances peuvent se dérouler au cabinet, dans un espace dédié à la pratique. L'adresse est communiquée lors de la prise de rendez-vous.</p></div>
+      <div class="info"><strong>À distance</strong><p>Les séances peuvent également se dérouler en visioconférence.</p></div>
     </div>
-    <div class="modes">
-      <div class="mode"><div class="pastille" style="background:#D3DDCB"><svg viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v10h-6v-6H9v6H3Z" fill="#4F6448"/></svg></div><div><h3>À domicile</h3><p>Je viens chez vous pour une séance dans votre environnement habituel.</p></div></div>
-      <div class="mode"><div class="pastille" style="background:#F8D2C0"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5" fill="none" stroke="#C4552D" stroke-width="2"/><path d="M2 19h20" stroke="#C4552D" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>En visio</h3><p>Une séance à distance, depuis chez vous, dans un cadre adapté à la pratique.</p></div></div>
-      <div class="mode"><div class="pastille" style="background:#DCE7DF"><svg viewBox="0 0 24 24"><path d="M5 20V9l7-5 7 5v11" fill="none" stroke="#4F6448" stroke-width="2"/><path d="M9 20v-6h6v6" fill="none" stroke="#4F6448" stroke-width="2"/></svg></div><div><h3>En cabinet</h3><p>Un rendez-vous dans un espace dédié à la séance. Les modalités pratiques vous sont précisées lors de la prise de contact.</p></div></div>
+    <div class="tarifs">
+      <div class="tarif"><span>Séance individuelle à domicile</span><strong>60 €</strong></div>
+      <div class="tarif"><span>Séance individuelle en visioconférence</span><strong>50 €</strong></div>
+      <div class="tarif"><span>Séance individuelle pour un enfant (de 4 à 16 ans)</span><strong>45 €</strong></div>
+      <div class="tarif"><span>Tarif étudiants et demandeurs d'emploi</span><strong>45 €</strong></div>
+      <div class="tarif"><span>Séance de groupe (jusqu'à 10 participants)</span><strong>10 € / participant</strong></div>
     </div>
+    <p class="tarif-note">Les séances peuvent se dérouler à domicile, en cabinet ou en visioconférence, selon la formule choisie. Le tarif d'une séance en cabinet est à préciser lors de la prise de contact. Pour toute question sur les modalités, n'hésitez pas à prendre contact.</p>
   </div>
 </section>
 
-<section id="temoignages">
-  <div class="wrap">
-    <h2>Ils m'ont fait confiance</h2>
-    <p class="sous">Paroles de personnes accompagnées</p>
-    <blockquote class="temoignage">
-      « [Court témoignage : ex. "Après quelques séances, j'ai retrouvé un sommeil plus serein et surtout des outils simples que j'utilise encore au quotidien."] »
-      <footer>— [Prénom ou initiales], [contexte : ex. accompagnement pour le sommeil]</footer>
-    </blockquote>
-  </div>
-</section>
+
 
 <section class="alt" id="contact">
   <div class="wrap">
@@ -253,7 +280,7 @@ footer a{text-decoration:underline}
         <a href="tel:+33664948982"><svg viewBox="0 0 24 24" fill="none" stroke="#2E5784" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>06 64 94 89 82</a>
         <a href="mailto:meynardsix@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="#2E5784" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>meynardsix@gmail.com</a>
       </div>
-      <p class="reassurance">Je réponds généralement sous 48h. Le premier échange est gratuit et sans engagement.</p>
+      <p class="reassurance">Un premier échange permet de faire le point sur votre besoin et de choisir la formule la plus adaptée.</p>
     </div>
   </div>
 </section>
@@ -261,8 +288,8 @@ footer a{text-decoration:underline}
 <footer>
   <div class="wrap">
     <p class="marque">soph<span>RE</span>ncorps</p>
-    <p style="margin-top:6px">Sophrologie · À domicile, en cabinet et en visio · Clermont-Ferrand</p>
-    <p class="legal">La sophrologie s'inscrit dans une démarche d'accompagnement et de bien-être. Elle ne remplace pas un avis, un diagnostic ou un traitement médical.</p>
+    <p style="margin-top:6px">Sophrologie · À domicile, en cabinet et en visioconférence · Clermont-Ferrand et alentours</p>
+    <p class="legal">La sophrologie est une pratique complémentaire. Elle ne remplace ni un diagnostic, ni un traitement, ni un suivi médical ou psychologique. L'accompagnement des douleurs physiques intervient uniquement en complément d'une prise en charge médicale.</p>
     <p class="legal">Isabelle Meynard · SIRET 13103050400016 · Site hébergé par Github. © <span id="annee"></span> sophREncorps</p>
   </div>
 </footer>
