@@ -69,14 +69,12 @@ h2{font-family:"Quicksand",system-ui,sans-serif;font-weight:700;color:var(--bleu
 
 /* About / portrait */
 .about{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(300px,1.2fr);gap:60px;align-items:center;max-width:920px;margin:auto}
-.about-visual{min-height:330px;border-radius:34px;background:linear-gradient(145deg,#E8F0F5,#F9EEE5);position:relative;overflow:hidden;display:grid;place-items:center}
-.about-visual:before{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(46,87,132,.22);border-radius:50%;transform:rotate(-22deg)}
-.about-visual:after{content:"";position:absolute;width:150px;height:150px;background:var(--peche);opacity:.20;border-radius:58% 42% 55% 45%;right:-35px;bottom:-25px}
-.about-quote{position:relative;z-index:1;text-align:center;padding:30px;font-family:"Great Vibes","Nunito",cursive;color:var(--bleu);font-size:2.4rem;line-height:1.2}
+.about-visual{min-height:420px;border-radius:34px;position:relative;overflow:hidden;background:#E8F0F5;box-shadow:0 12px 30px rgba(46,87,132,.10)}
+.about-visual img{display:block;width:100%;height:100%;min-height:420px;position:absolute;inset:0;object-fit:cover;object-position:center 42%}
 .about-text h3{font-family:"Quicksand",system-ui,sans-serif;color:var(--bleu);font-size:1.45rem;margin-bottom:14px}
 .about-text p+p{margin-top:15px}
 .signature{font-family:"Great Vibes","Nunito",cursive;color:var(--bleu);font-size:1.9rem;margin-top:20px}
-@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}.about-visual{min-height:230px}}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}.about-visual{min-height:360px}.about-visual img{min-height:360px}}
 
 /* accompagnements */
 .cartes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:920px;margin:auto}
@@ -180,7 +178,7 @@ footer a{text-decoration:underline}
     <h2>Qui suis-je ?</h2>
     <p class="sous">Un visage derrière l'accompagnement</p>
     <div class="about">
-      <div class="about-visual"><p class="about-quote">Prendre le temps<br>de souffler,<br>simplement.</p></div>
+      <div class="about-visual"><img src="isabelle-meynard.jpg" alt="Isabelle Meynard, sophrologue, dans un jardin"></div>
       <div class="about-text">
         <h3>Je m'appelle Isabelle Meynard</h3>
         <p>Sophrologue certifiée de l'IFS de Paris 10 (fondée par Catherine Aliotta), j'ai à cœur d'offrir un espace d'écoute où chacun se sente accueilli, sans jugement, avec ce qu'il amène ce jour-là.</p>
